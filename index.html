@@ -633,7 +633,7 @@ function showSuccess(source, pos, rc) {
     document.getElementById('pos-disp').textContent = '#' + pos.toLocaleString();
     document.getElementById('pos-num').textContent  = '#' + pos.toLocaleString();
     const msg = encodeURIComponent(
-      `I just joined the Awahouse waitlist! Lagos real estate is finally getting fixed \u2014 verified agents, title-checked properties, escrow-protected deposits.\nJoin me: awahouse.ng` + (rc ? '/r/' + rc : '')
+`I just joined the Awahouse waitlist! Lagos real estate is finally getting fixed \u2014 verified agents, title-checked properties, escrow-protected deposits.\nJoin me: https://www.awahouse.ng` + (rc ? '/r/' + rc : '')
     );
     document.getElementById('wa-sh').href = `https://wa.me/?text=${msg}`;
     document.getElementById('tw-sh').href = `https://twitter.com/intent/tweet?text=${msg}`;
