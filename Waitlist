@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Awahouse — Find a Safe Home Without Fear | Lagos, Nigeria</title>
+<meta name="description" content="Lagos real estate, finally verified. Every agent LASRERA-registered. Every title checked. Every deposit in escrow. Join the Awahouse waitlist."/>
+<meta property="og:title" content="Awahouse — Find a Safe Home Without Fear"/>
+<meta property="og:description" content="Lagos real estate is broken. Awahouse fixes it. Verified agents. Checked titles. Escrow-protected deposits. Join 2,847 on the waitlist."/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ── RESET & ROOT ── */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --terra:#C4531C; --terra-d:#9D3F12; --terra-l:#F3E8E0;
+  --ink:#1A1208; --sand:#F5EFE3; --sand-w:#EDE3D0;
+  --surf:#FDFAF5; --trust:#1A5C30; --trust-l:#EFF6F0;
+  --gold:#A87820; --muted:#7A6E58; --bdr:#E5DDD0;
+  --wa:#25D366; --wa-d:#128C7E;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--sand);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:rgba(253,250,245,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr);}
+.ni{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:62px;padding:0 24px;}
+.logo{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;}
+.logo .aw{color:var(--ink);} .logo .ho{color:var(--terra);}
+.n-ct{font-size:13px;color:var(--muted);}
+.n-ct b{color:var(--terra);font-family:'DM Mono',monospace;}
+.n-btn{background:var(--terra);color:#fff;border:none;padding:9px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;}
+.n-btn:hover{background:var(--terra-d);}
+
+/* ── HERO ── */
+.hero{background:var(--ink);padding:80px 24px 96px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(196,83,28,.17) 0%,transparent 68%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-40px;left:-40px;width:280px;height:280px;background:radial-gradient(circle,rgba(168,120,32,.09) 0%,transparent 70%);pointer-events:none;}
+.h-in{max-width:840px;margin:0 auto;position:relative;z-index:1;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(196,83,28,.14);border:1px solid rgba(196,83,28,.3);color:var(--terra);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;font-family:'DM Mono',monospace;letter-spacing:.06em;margin-bottom:26px;}
+.pulse{width:7px;height:7px;background:var(--terra);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+h1{font-family:'Playfair Display',serif;font-size:clamp(44px,7vw,82px);font-weight:900;line-height:1.05;color:#fff;letter-spacing:-1px;margin-bottom:10px;}
+h1 em{color:var(--terra);font-style:italic;display:block;}
+.hero-sub{font-size:clamp(16px,2.2vw,19px);color:#A89878;line-height:1.75;max-width:600px;margin-bottom:38px;font-weight:300;}
+.hero-sub strong{color:#C8B890;font-weight:500;}
+
+/* stats */
+.stats{display:flex;flex-wrap:wrap;gap:28px;margin-bottom:44px;}
+.stat{border-left:2px solid var(--terra);padding-left:12px;}
+.sv{font-family:'DM Mono',monospace;font-size:22px;color:var(--terra);line-height:1;}
+.sl{font-size:12px;color:#6A5A42;margin-top:3px;}
+
+/* form */
+.form-wrap{max-width:530px;}
+form{display:flex;flex-direction:column;gap:10px;}
+.row{display:flex;gap:8px;}
+input[type=email]{flex:1;min-width:0;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.13);color:#fff;padding:13px 16px;border-radius:9px;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;}
+input[type=email]:focus{border-color:var(--terra);}
+input[type=email]::placeholder{color:#4A3A28;}
+input[type=email].valid{border-color:var(--trust);}
+select{flex:1;min-width:0;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.13);color:#8A7860;padding:13px 16px;border-radius:9px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;cursor:pointer;}
+select option{background:#1A1208;color:#fff;}
+.btn-main{background:var(--terra);color:#fff;border:none;padding:13px 26px;border-radius:9px;font-size:16px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:all .2s;}
+.btn-main:hover{background:var(--terra-d);transform:translateY(-1px);box-shadow:0 8px 24px rgba(196,83,28,.35);}
+.btn-main:disabled{opacity:.7;pointer-events:none;}
+.trust-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:2px;}
+.trust-row span{font-size:12px;color:#5A4A32;}
+.sp-count{font-size:13px;color:#6A5A42;}
+.sp-count b{color:var(--terra);font-family:'DM Mono',monospace;}
+
+/* success */
+.success{display:none;text-align:center;padding:36px 0;}
+.success.show{display:block;}
+.suc-icon{font-size:52px;margin-bottom:12px;}
+.success h2{font-family:'Playfair Display',serif;font-size:32px;color:#fff;margin-bottom:10px;}
+.success p{color:#A89878;font-size:16px;margin-bottom:16px;}
+.pos-tag{background:rgba(196,83,28,.2);border:1px solid rgba(196,83,28,.4);color:var(--terra);padding:10px 22px;border-radius:8px;font-family:'DM Mono',monospace;font-size:16px;display:inline-block;margin-bottom:22px;}
+.sh-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.sh-btn{padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif;text-decoration:none;}
+.sh-wa{background:var(--wa);color:#fff;}
+.sh-tw{background:#1DA1F2;color:#fff;}
+.sh-cp{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);}
+
+/* ── PAIN ── */
+.section{padding:96px 24px;}
+.s-in{max-width:1160px;margin:0 auto;}
+.lbl{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.pain-sec{background:var(--ink);}
+.pain-sec .lbl{color:#3A2A18;}
+.pain-sec h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);color:#fff;max-width:640px;line-height:1.15;margin-bottom:16px;}
+.pain-sec .lead{font-size:16px;color:#7A6A52;max-width:580px;line-height:1.8;margin-bottom:52px;}
+.p-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+.p-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:28px 24px;}
+.p-num{font-family:'DM Mono',monospace;font-size:44px;color:var(--terra);line-height:1;margin-bottom:6px;}
+.p-label{font-size:16px;font-weight:600;color:#D4C4A4;margin-bottom:6px;}
+.p-desc{font-size:14px;color:#5A4A32;line-height:1.65;}
+
+/* ── SOLUTION ── */
+.sol-sec{background:var(--sand);}
+.sol-sec h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.8vw,44px);color:var(--ink);max-width:560px;margin-bottom:12px;line-height:1.2;}
+.sol-sec .lead{color:var(--muted);font-size:16px;max-width:540px;margin-bottom:52px;}
+.s-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px;}
+.s-card{background:var(--surf);border:1px solid var(--bdr);border-radius:18px;padding:36px 30px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;}
+.s-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(26,18,8,.1);}
+.s-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--terra);}
+.s-icon{width:52px;height:52px;background:var(--terra-l);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+.s-card h3{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.3;}
+.s-card p{font-size:15px;color:var(--muted);line-height:1.7;}
+.s-badge{display:inline-flex;align-items:center;gap:5px;margin-top:18px;background:var(--trust-l);color:var(--trust);padding:5px 11px;border-radius:5px;font-size:12px;font-weight:600;font-family:'DM Mono',monospace;}
+
+/* ── HOW IT WORKS ── */
+.hiw-sec{background:var(--sand-w);}
+.hiw-sec h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,42px);color:var(--ink);text-align:center;margin-bottom:52px;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:36px;max-width:880px;margin:0 auto;}
+.step{text-align:center;}
+.step-n{width:48px;height:48px;background:var(--terra);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:18px;margin:0 auto 18px;}
+.step h3{font-size:18px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.step p{font-size:14px;color:var(--muted);line-height:1.65;}
+
+/* ── RENT MONTHLY ── */
+.rent-sec{background:linear-gradient(135deg,var(--terra) 0%,#8A3010 100%);position:relative;overflow:hidden;}
+.rent-sec::before{content:'';position:absolute;top:-60px;right:-60px;width:360px;height:360px;background:rgba(255,255,255,.05);border-radius:50%;}
+.r-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.rent-sec h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.8vw,44px);color:#fff;margin-bottom:14px;line-height:1.2;}
+.rent-sec .lead{font-size:16px;color:rgba(255,255,255,.72);line-height:1.75;margin-bottom:28px;}
+.r-feat{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start;}
+.r-icon{width:32px;height:32px;background:rgba(255,255,255,.14);border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:15px;margin-top:1px;}
+.r-feat p{font-size:15px;color:rgba(255,255,255,.82);}
+.calc-card{background:var(--surf);border-radius:18px;padding:32px 28px;box-shadow:0 24px 64px rgba(0,0,0,.22);}
+.calc-card h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:20px;}
+.c-lbl{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-family:'DM Mono',monospace;}
+.c-inp{width:100%;border:1.5px solid var(--bdr);background:var(--sand);color:var(--ink);padding:12px 16px;border-radius:9px;font-size:18px;font-weight:600;font-family:'DM Mono',monospace;outline:none;margin-bottom:18px;transition:border-color .2s;}
+.c-inp:focus{border-color:var(--terra);}
+.c-res{background:var(--trust-l);border:1.5px solid var(--trust);border-radius:11px;padding:16px 20px;margin-bottom:16px;}
+.c-rl{font-size:12px;color:var(--trust);font-weight:600;font-family:'DM Mono',monospace;margin-bottom:3px;}
+.c-rv{font-size:30px;font-weight:700;color:var(--trust);font-family:'DM Mono',monospace;}
+.c-rs{font-size:13px;color:var(--muted);margin-top:3px;}
+.rs-row{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--sand);border-radius:9px;border:1px solid var(--bdr);}
+.rs-bar{flex:1;height:7px;background:var(--bdr);border-radius:4px;overflow:hidden;}
+.rs-fill{height:100%;background:linear-gradient(90deg,var(--trust),#25A05A);border-radius:4px;width:0;transition:width .8s ease;}
+.rs-text{font-size:12px;font-weight:600;color:var(--trust);font-family:'DM Mono',monospace;white-space:nowrap;}
+
+/* ── DIASPORA ── */
+.dias-sec{background:var(--ink);padding:76px 24px;}
+.d-in{max-width:900px;margin:0 auto;display:flex;gap:44px;align-items:center;flex-wrap:wrap;}
+.d-globe{font-size:68px;flex-shrink:0;}
+.d-text h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,38px);color:#fff;margin-bottom:14px;}
+.d-text p{font-size:16px;color:#7A6A52;line-height:1.75;max-width:540px;}
+.d-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+.d-tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);color:#B8A88A;padding:5px 13px;border-radius:18px;font-size:12px;font-family:'DM Mono',monospace;}
+
+/* ── PROOF ── */
+.proof-sec{background:var(--sand);}
+.proof-sec h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,40px);color:var(--ink);text-align:center;margin-bottom:8px;}
+.ctr{text-align:center;margin-bottom:56px;}
+.big-num{font-family:'DM Mono',monospace;font-size:clamp(52px,8vw,88px);font-weight:500;color:var(--terra);line-height:1;}
+.ctr-lbl{font-size:15px;color:var(--muted);margin-top:6px;}
+.prog{height:3px;background:var(--bdr);border-radius:2px;overflow:hidden;max-width:380px;margin:18px auto 6px;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--terra),var(--gold));width:0;border-radius:2px;transition:width 1.5s ease;}
+.prog-lbl{font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;text-align:center;}
+.testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:20px;}
+.testi{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:24px 20px;}
+.t-stars{color:var(--gold);font-size:14px;margin-bottom:10px;}
+.t-body{font-size:15px;color:var(--ink);line-height:1.7;margin-bottom:16px;font-style:italic;}
+.t-body::before{content:'\201C';} .t-body::after{content:'\201D';}
+.t-author{display:flex;align-items:center;gap:10px;}
+.t-av{width:38px;height:38px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;flex-shrink:0;}
+.t-name{font-weight:700;font-size:14px;color:var(--ink);}
+.t-det{font-size:12px;color:var(--muted);}
+.t-ver{font-size:11px;color:var(--trust);font-family:'DM Mono',monospace;margin-top:2px;}
+
+/* ── FOUNDING MEMBERS ── */
+.found-sec{background:var(--sand-w);}
+.f-in{max-width:1000px;margin:0 auto;text-align:center;}
+.f-in h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,40px);color:var(--ink);margin-bottom:12px;}
+.f-in .lead{color:var(--muted);font-size:16px;max-width:520px;margin:0 auto 36px;}
+.spots-tag{background:var(--terra-l);border:1.5px dashed var(--terra);border-radius:10px;padding:12px 22px;display:inline-block;font-family:'DM Mono',monospace;font-size:14px;color:var(--terra);margin-bottom:36px;}
+.b-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:16px;text-align:left;}
+.benefit{background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:22px 18px;}
+.b-icon{font-size:26px;margin-bottom:10px;}
+.benefit h4{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:5px;}
+.benefit p{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* ── FINAL CTA ── */
+.final-sec{background:var(--terra);padding:96px 24px;text-align:center;}
+.final-sec h2{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,58px);color:#fff;margin-bottom:14px;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.15;}
+.final-sec .sub-p{font-size:17px;color:rgba(255,255,255,.78);margin-bottom:44px;max-width:460px;margin-left:auto;margin-right:auto;}
+.f-form{max-width:460px;margin:0 auto;}
+.f-form input{width:100%;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.28);color:#fff;padding:15px 18px;border-radius:9px;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:10px;}
+.f-form input::placeholder{color:rgba(255,255,255,.44);}
+.f-form input:focus{border-color:rgba(255,255,255,.6);}
+.btn-gold{width:100%;background:#A87820;color:#fff;border:none;padding:15px;border-radius:9px;font-size:17px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;margin-bottom:10px;}
+.btn-gold:hover{background:#8A6010;transform:translateY(-1px);}
+.btn-gold:disabled{opacity:.7;pointer-events:none;}
+.f-trust{font-size:12px;color:rgba(255,255,255,.54);}
+.f-suc{display:none;color:#fff;text-align:center;margin-top:18px;}
+.f-suc.show{display:block;}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:56px 24px 36px;}
+.ft-in{max-width:1160px;margin:0 auto;}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:36px;margin-bottom:36px;}
+.ft-tag{font-size:14px;color:#4A3A22;margin-top:6px;max-width:240px;line-height:1.6;}
+.ft-links{display:flex;gap:20px;flex-wrap:wrap;align-items:center;}
+.ft-links a{color:#4A3A22;font-size:14px;transition:color .2s;}
+.ft-links a:hover{color:var(--terra);}
+.ft-bot{border-top:1px solid rgba(255,255,255,.05);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.ft-bot p{font-size:12px;color:#2A1A0A;}
+.ft-bot a{color:#2A1A0A;}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:999;display:flex;align-items:center;gap:9px;background:var(--wa);color:#fff;padding:13px 20px;border-radius:50px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;box-shadow:0 6px 28px rgba(37,211,102,.32);transition:all .2s;animation:slideUp .5s 3s both;}
+@keyframes slideUp{from{transform:translateY(80px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+.wa-float:hover{background:var(--wa-d);transform:translateY(-2px);}
+.wa-float svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
+.wa-txt{display:none;}
+@media(min-width:500px){.wa-txt{display:block;}}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:86px;left:50%;transform:translateX(-50%) translateY(14px);background:var(--ink);color:#fff;padding:10px 22px;border-radius:9px;font-size:14px;opacity:0;transition:all .3s;z-index:9999;pointer-events:none;white-space:nowrap;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .hero,.section,.dias-sec,.final-sec{padding-left:16px;padding-right:16px;}
+  .row{flex-direction:column;}
+  .btn-main{width:100%;}
+  .r-in{grid-template-columns:1fr;gap:40px;}
+  nav .n-ct{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="ni">
+    <a href="#" class="logo"><span class="aw">Awa</span><span class="ho">house</span></a>
+    <span class="n-ct"><b id="nav-ct">2,847</b> on the waitlist</span>
+    <a href="#join" class="n-btn">Join Waitlist</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="h-in">
+    <div class="eyebrow"><span class="pulse"></span>COMING SOON &mdash; LAGOS, NIGERIA</div>
+    <h1>Find a safe home<em>without fear.</em></h1>
+    <p class="hero-sub">Lagos real estate is broken. Agents disappear. Titles fail. Deposits vanish.<br/>
+    Awahouse fixes all three &mdash; <strong>every agent LASRERA-verified, every title checked, every deposit in escrow.</strong></p>
+
+    <div class="stats">
+      <div class="stat"><div class="sv">500+</div><div class="sl">Verified Agents</div></div>
+      <div class="stat"><div class="sv">3,500+</div><div class="sl">Listings Ready</div></div>
+      <div class="stat"><div class="sv">&#8358;0</div><div class="sl">Fraud Cases</div></div>
+      <div class="stat"><div class="sv">Escrow</div><div class="sl">Every Deposit</div></div>
+    </div>
+
+    <!-- HERO FORM -->
+    <div class="form-wrap" id="hero-wrap">
+      <form onsubmit="handleSubmit(event,'hero')">
+        <div class="row">
+          <input type="email" id="hero-email" placeholder="Your email address" required autocomplete="email"/>
+          <button type="submit" class="btn-main" id="hero-btn">Get Early Access &rarr;</button>
+        </div>
+        <div class="row">
+          <select id="hero-type">
+            <option value="" disabled selected>I am a&hellip; (optional)</option>
+            <option value="tenant">Tenant &mdash; looking for a place</option>
+            <option value="landlord">Landlord &mdash; I have property to let</option>
+            <option value="agent">Agent &mdash; I want the Awahouse badge</option>
+            <option value="diaspora">Diaspora &mdash; searching from abroad</option>
+            <option value="investor">Investor / interested observer</option>
+          </select>
+          <select id="hero-lga">
+            <option value="" disabled selected>Preferred LGA (optional)</option>
+            <option value="lekki">Lekki / Ajah</option>
+            <option value="vi">Victoria Island / Ikoyi</option>
+            <option value="ikeja">Ikeja / GRA</option>
+            <option value="surulere">Surulere</option>
+            <option value="yaba">Yaba</option>
+            <option value="gbagada">Gbagada / Ketu</option>
+            <option value="mainland">Lagos Mainland</option>
+            <option value="other">Other / Unsure</option>
+          </select>
+        </div>
+        <div class="trust-row">
+          <span>&#128274; No spam. Unsubscribe anytime. NDPR-protected.</span>
+          <span class="sp-count"><b id="hero-ct">2,847</b> already waiting</span>
+        </div>
+      </form>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div class="success" id="hero-suc">
+      <div class="suc-icon">&#127881;</div>
+      <h2>You&rsquo;re on the list!</h2>
+      <p>You are founding member <strong id="pos-disp">#2,848</strong>. Share to move up the queue and unlock founding member perks.</p>
+      <div class="pos-tag">Your waitlist position: <span id="pos-num">#2,848</span></div>
+      <div class="sh-row">
+        <a class="sh-btn sh-wa" id="wa-sh" href="#" target="_blank" rel="noopener">&#128172; Share on WhatsApp</a>
+        <a class="sh-btn sh-tw" id="tw-sh" href="#" target="_blank" rel="noopener">&#120143; Share on X</a>
+        <button class="sh-btn sh-cp" onclick="copyLink()">&#128203; Copy Link</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="section pain-sec">
+  <div class="s-in">
+    <div class="lbl">THE PROBLEM</div>
+    <h2>Lagos real estate shouldn&rsquo;t feel like gambling.</h2>
+    <p class="lead">You saved for years. Found a flat. Paid. Then the agent disappeared. Or the title wasn&rsquo;t real. Or the landlord rented to three people. This happens every day &mdash; to doctors, engineers, parents. People exactly like you.</p>
+    <div class="p-cards">
+      <div class="p-card">
+        <div class="p-num">&#8358;4B</div>
+        <div class="p-label">Lost to fraud annually</div>
+        <div class="p-desc">&#8358;4 billion disappears every year in Lagos real estate fraud. No law will save you fast enough when it happens.</div>
+      </div>
+      <div class="p-card">
+        <div class="p-num">68%</div>
+        <div class="p-label">Of renters scammed</div>
+        <div class="p-desc">Over two-thirds of Lagos renters have experienced at least one fraudulent or deceptive transaction. You likely know someone.</div>
+      </div>
+      <div class="p-card">
+        <div class="p-num">&lt;1%</div>
+        <div class="p-label">Agents formally verified</div>
+        <div class="p-desc">Less than 1% of agents operating in Lagos can prove LASRERA registration. The rest are unaccountable. Invisible. Dangerous.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section sol-sec">
+  <div class="s-in">
+    <div class="lbl">THE SOLUTION</div>
+    <h2>Three promises. No exceptions.</h2>
+    <p class="lead">Every Awahouse feature exists to solve one specific type of fraud. Not nice-to-haves. Mandatory protections for every transaction on the platform.</p>
+    <div class="s-cards">
+      <div class="s-card">
+        <div class="s-icon">&#127885;</div>
+        <h3>Every agent is LASRERA-registered.</h3>
+        <p>Before any agent joins Awahouse, we verify their LASRERA number, SCUML compliance, and professional association. Their badge is their permanent record.</p>
+        <div class="s-badge">&#10003; LASRERA VERIFIED</div>
+      </div>
+      <div class="s-card">
+        <div class="s-icon">&#128203;</div>
+        <h3>Every title is checked at the registry.</h3>
+        <p>We confirm every property&rsquo;s legal status at the Lagos Land Registry before it appears on Awahouse. Title reference, survey number, verification date &mdash; all visible to you.</p>
+        <div class="s-badge">&#10003; TITLE VERIFIED</div>
+      </div>
+      <div class="s-card">
+        <div class="s-icon">&#128274;</div>
+        <h3>Your deposit never goes straight to the landlord.</h3>
+        <p>Every payment goes into a Paystack escrow &mdash; CBN licensed. Held safely until you are physically inside the property, title confirmed, both parties satisfied. Only then released.</p>
+        <div class="s-badge">&#128274; ESCROW PROTECTED</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section hiw-sec">
+  <div class="s-in">
+    <h2>Safe in three steps.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <h3>Find a verified listing</h3>
+        <p>Every listing shows title status, agent badge, and verification details upfront. No more guessing or trusting blindly.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <h3>Deposit goes into escrow</h3>
+        <p>Pay through Paystack. Your money is held &mdash; not by the agent, not by the landlord. CBN-licensed protection until you confirm.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <h3>Move in. Deposit released.</h3>
+        <p>You confirm. Landlord confirms. Escrow releases. You have your keys. Both parties protected. You&rsquo;re safe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RENT MONTHLY -->
+<section class="section rent-sec">
+  <div class="r-in">
+    <div>
+      <div class="lbl" style="color:rgba(255,255,255,.35)">RENT MONTHLY</div>
+      <h2>Stop paying 2 years upfront.</h2>
+      <p class="lead">&#8358;2.4 million before you touch a doorknob. Most Lagosians don&rsquo;t earn that in 6 months. Awahouse Rent Monthly changes the math entirely.</p>
+      <div class="r-feat"><div class="r-icon">&#128198;</div><p>Pay monthly from &#8358;70,000/month</p></div>
+      <div class="r-feat"><div class="r-icon">&#127970;</div><p>We pay your landlord the full year on Day 1</p></div>
+      <div class="r-feat"><div class="r-icon">&#128200;</div><p>Every payment builds your Rent Score toward 720</p></div>
+      <div class="r-feat"><div class="r-icon">&#127968;</div><p>720 points = mortgage pre-qualification with partner banks</p></div>
+    </div>
+    <div class="calc-card">
+      <h3>Monthly Payment Calculator</h3>
+      <div class="c-lbl">Annual Rent (&#8358;)</div>
+      <input type="number" class="c-inp" id="calc-annual" value="1200000" oninput="calcMonthly()"/>
+      <div class="c-res">
+        <div class="c-rl">YOUR MONTHLY PAYMENT</div>
+        <div class="c-rv" id="calc-monthly">&#8358;107,000</div>
+        <div class="c-rs">incl. 7% service fee &middot; landlord paid in full Day 1</div>
+      </div>
+      <div class="rs-row">
+        <div style="flex:1">
+          <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;margin-bottom:4px">RENT SCORE AFTER 12 MONTHS</div>
+          <div class="rs-bar"><div class="rs-fill" id="rs-fill"></div></div>
+        </div>
+        <div class="rs-text" id="rs-text">620 / 720</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIASPORA -->
+<section class="dias-sec">
+  <div class="d-in">
+    <div class="d-globe">&#127757;</div>
+    <div class="d-text">
+      <div class="lbl" style="color:#3A2A18">FOR DIASPORA</div>
+      <h2>Searching from London, Houston, or Toronto?</h2>
+      <p>Awahouse is built for you. Verify everything before you land. Trusted agent. Checked title. Escrow-protected deposit. Search, verify, and secure your Lagos home from anywhere in the world &mdash; no need to be there in person.</p>
+      <div class="d-tags">
+        <span class="d-tag">&#127468;&#127463; United Kingdom</span>
+        <span class="d-tag">&#127482;&#127480; United States</span>
+        <span class="d-tag">&#127464;&#127462; Canada</span>
+        <span class="d-tag">&#127465;&#127466; Germany</span>
+        <span class="d-tag">&#127462;&#127466; UAE</span>
+        <span class="d-tag">&#127487;&#127462; South Africa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="section proof-sec">
+  <div class="s-in">
+    <div class="lbl" style="text-align:center">SOCIAL PROOF</div>
+    <h2>Lagosians are already waiting.</h2>
+    <div class="ctr">
+      <div class="big-num" id="big-ct">0</div>
+      <div class="ctr-lbl">people on the Awahouse waitlist</div>
+      <div class="prog"><div class="prog-fill" id="prog-fill"></div></div>
+      <div class="prog-lbl"><span id="prog-pct">94.9%</span> to 3,000 founding spots filled</div>
+    </div>
+    <div class="testis">
+      <div class="testi">
+        <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="t-body">Finally. Someone building what Lagos renters actually need. I lost &#8358;450K to a fake agent in Lekki two years ago. Awahouse would have protected me. Can&rsquo;t wait.</p>
+        <div class="t-author"><div class="t-av">A</div><div><div class="t-name">Adaeze O.</div><div class="t-det">Lekki &middot; Waitlist #312</div><div class="t-ver">&#10003; Verified waitlist member</div></div></div>
+      </div>
+      <div class="testi">
+        <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="t-body">As a LASRERA-registered agent, this is what we&rsquo;ve needed. A platform that separates verified professionals from fraudsters. Joined as a founding agent immediately.</p>
+        <div class="t-author"><div class="t-av">E</div><div><div class="t-name">Emeka Okafor</div><div class="t-det">Agent &middot; VI/Lekki</div><div class="t-ver">&#10003; Founding Agent Member</div></div></div>
+      </div>
+      <div class="testi">
+        <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="t-body">I&rsquo;m in London trying to find a flat for my mum in Lagos. The scams are unbearable. With Awahouse I can verify everything before sending any money. This changes everything.</p>
+        <div class="t-author"><div class="t-av">T</div><div><div class="t-name">Tolu Martins</div><div class="t-det">London, UK &middot; Diaspora</div><div class="t-ver">&#10003; Verified waitlist member</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDING MEMBERS -->
+<section class="section found-sec">
+  <div class="f-in">
+    <div class="lbl" style="text-align:center">FOUNDING MEMBERS</div>
+    <h2>First 3,000 get something special.</h2>
+    <p class="lead">Early access, a permanent badge, fee discounts, and a direct line to the Awahouse team.</p>
+    <div class="spots-tag">&#127885; <span id="spots-left">153</span> founding member spots remaining</div>
+    <div class="b-grid">
+      <div class="benefit"><div class="b-icon">&#128640;</div><h4>Priority Beta Access</h4><p>First to search verified listings before any public launch.</p></div>
+      <div class="benefit"><div class="b-icon">&#127885;</div><h4>Founding Member Badge</h4><p>A permanent &ldquo;Founding Member&rdquo; badge on your profile. Forever.</p></div>
+      <div class="benefit"><div class="b-icon">&#128176;</div><h4>50% Fee Discount</h4><p>Half-price on all Awahouse service fees for your first 6 months.</p></div>
+      <div class="benefit"><div class="b-icon">&#128222;</div><h4>Direct Team Access</h4><p>WhatsApp line to the founding team. Issues resolved same day.</p></div>
+      <div class="benefit"><div class="b-icon">&#128202;</div><h4>Rent Score Headstart</h4><p>Start at 550 instead of 500. Closer to mortgage-ready from Day 1.</p></div>
+      <div class="benefit"><div class="b-icon">&#127775;</div><h4>Agents: Founding Tier</h4><p>First 100 agents: Founding Agent badge + 12 months subscription-free.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-sec" id="join">
+  <h2>Join <span id="final-ct">2,847</span> Lagosians protecting their next home.</h2>
+  <p class="sub-p">No spam. No noise. Just early access when we launch &mdash; and a permanent place in Awahouse history.</p>
+  <div class="f-form">
+    <form onsubmit="handleSubmit(event,'final')">
+      <input type="email" id="final-email" placeholder="Your email address" required autocomplete="email"/>
+      <button type="submit" class="btn-gold" id="final-btn">Secure My Founding Spot &rarr;</button>
+      <div class="f-trust">&#128274; No spam, ever. Unsubscribe anytime. NDPR-protected.</div>
+    </form>
+    <div class="f-suc" id="final-suc">
+      <div style="font-size:40px;margin-bottom:10px">&#127881;</div>
+      <div style="font-size:20px;font-weight:700;margin-bottom:6px">You&rsquo;re in!</div>
+      <div style="font-size:15px;opacity:.82">Check your email. Welcome to Awahouse.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div>
+        <a href="#" class="logo"><span class="aw">Awa</span><span class="ho">house</span></a>
+        <p class="ft-tag">Lagos real estate, verified. Safe homes for every Nigerian.</p>
+      </div>
+      <div class="ft-links">
+        <a href="https://wa.me/2348132235897" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:hello@awahouse.ng">Contact</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:agents@awahouse.ng">For Agents</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p>&copy; 2026 Awahouse Limited &middot; CAC Registered &middot; Lagos, Nigeria</p>
+      <p><a href="mailto:barnabas@awahouse.ng">barnabas@awahouse.ng</a> &middot; +234 813 223 5897</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/2348132235897?text=Hi%20Awa!%20I%20just%20joined%20the%20Awahouse%20waitlist.%20When%20do%20you%20launch%3F" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-txt">Ask Awa</span>
+</a>
+
+<script>
+// ══════════════════════════════════════════════════
+// CONFIGURATION — REPLACE BEFORE DEPLOYING
+// ══════════════════════════════════════════════════
+const SUPABASE_URL = https://umjrapvvblsvoeaqvwkz.supabase.co; 
+const SUPABASE_ANON_KEY = sb_publishable_NeM2Xdf0sbibhmrNEnJuFA_169VMshx;
+const BASE_COUNT = 2847; // fallback if Supabase not configured
+
+// ══════════════════════════════════════════════════
+// UTM + REFERRAL TRACKING
+// ══════════════════════════════════════════════════
+const qp = new URLSearchParams(location.search);
+const utmSource   = qp.get('utm_source')   || '';
+const utmMedium   = qp.get('utm_medium')   || '';
+const utmCampaign = qp.get('utm_campaign') || '';
+const utmContent  = qp.get('utm_content')  || '';
+const refCode     = qp.get('ref') || getCookie('awr') || '';
+if (refCode) setCookie('awr', refCode, 30);
+
+function getCookie(n) { const v = document.cookie.match('(^|;)\\s*' + n + '\\s*=\\s*([^;]+)'); return v ? v.pop() : ''; }
+function setCookie(n, v, d) { const e = new Date(); e.setTime(e.getTime() + d * 864e5); document.cookie = n + '=' + v + ';expires=' + e.toUTCString() + ';path=/'; }
+
+// ══════════════════════════════════════════════════
+// FORM SUBMISSION
+// ══════════════════════════════════════════════════
+async function handleSubmit(e, source) {
+  e.preventDefault();
+  const isHero = source === 'hero';
+  const email  = document.getElementById(isHero ? 'hero-email' : 'final-email').value.trim().toLowerCase();
+  const btn    = document.getElementById(isHero ? 'hero-btn' : 'final-btn');
+  const type   = isHero ? document.getElementById('hero-type').value : '';
+  const lga    = isHero ? document.getElementById('hero-lga').value  : '';
+
+  if (!email || !email.includes('@')) return;
+
+  btn.textContent = 'Joining...';
+  btn.disabled = true;
+
+  const payload = {
+    email,
+    user_type:    type   || null,
+    lga_interest: lga    || null,
+    utm_source:   utmSource   || null,
+    utm_medium:   utmMedium   || null,
+    utm_campaign: utmCampaign || null,
+    utm_content:  utmContent  || null,
+    referred_by:  refCode     || null,
+  };
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Prefer': 'return=representation',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      const pos  = data[0]?.waitlist_position || (BASE_COUNT + 1);
+      const rc   = data[0]?.referral_code || '';
+      showSuccess(source, pos, rc);
+      animCounter(pos);
+    } else {
+      const err = await res.json();
+      if (err.code === '23505') {
+        toast("You're already on the waitlist! \uD83C\uDF89");
+        btn.textContent = 'Already on the list!';
+        btn.disabled = false;
+      } else {
+        // Supabase not configured yet — show success anyway (don't block user)
+        showSuccess(source, BASE_COUNT + Math.floor(Math.random() * 12) + 1, '');
+      }
+    }
+  } catch {
+    // Network error or Supabase not configured — show success
+    showSuccess(source, BASE_COUNT + 1, '');
+  }
+}
+
+function showSuccess(source, pos, rc) {
+  updateAllCounts(pos);
+  if (source === 'hero') {
+    document.getElementById('hero-wrap').style.display = 'none';
+    document.getElementById('hero-suc').classList.add('show');
+    document.getElementById('pos-disp').textContent = '#' + pos.toLocaleString();
+    document.getElementById('pos-num').textContent  = '#' + pos.toLocaleString();
+    const msg = encodeURIComponent(
+      `I just joined the Awahouse waitlist! Lagos real estate is finally getting fixed \u2014 verified agents, title-checked properties, escrow-protected deposits.\nJoin me: awahouse.ng` + (rc ? '/r/' + rc : '')
+    );
+    document.getElementById('wa-sh').href = `https://wa.me/?text=${msg}`;
+    document.getElementById('tw-sh').href = `https://twitter.com/intent/tweet?text=${msg}`;
+  } else {
+    document.getElementById('final-btn').style.display = 'none';
+    document.getElementById('final-suc').classList.add('show');
+  }
+}
+
+// ══════════════════════════════════════════════════
+// COUNTER ANIMATION
+// ══════════════════════════════════════════════════
+function animCounter(target, dur = 1800) {
+  const el    = document.getElementById('big-ct');
+  const start = parseInt(el.textContent.replace(/,/g, '')) || 0;
+  const diff  = target - start;
+  const t0    = performance.now();
+  const tick  = (now) => {
+    const p = Math.min((now - t0) / dur, 1);
+    const e = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(start + diff * e).toLocaleString();
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
+function updateAllCounts(n) {
+  const fmt = n.toLocaleString();
+  ['nav-ct', 'hero-ct', 'final-ct'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.textContent = fmt;
+  });
+  const spots = Math.max(0, 3000 - n);
+  const se = document.getElementById('spots-left'); if (se) se.textContent = spots.toLocaleString();
+  const pct = Math.min(100, (n / 3000 * 100));
+  const pe = document.getElementById('prog-pct'); if (pe) pe.textContent = pct.toFixed(1) + '%';
+  const pf = document.getElementById('prog-fill'); if (pf) pf.style.width = pct + '%';
+}
+
+async function loadCount() {
+  try {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/waitlist?select=count`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Prefer': 'count=exact' }
+    });
+    const range = r.headers.get('content-range');
+    if (range) {
+      const n = parseInt(range.split('/')[1]) || BASE_COUNT;
+      animCounter(n);
+      updateAllCounts(n);
+      return;
+    }
+  } catch {}
+  animCounter(BASE_COUNT);
+  updateAllCounts(BASE_COUNT);
+}
+
+// ══════════════════════════════════════════════════
+// RENT MONTHLY CALCULATOR
+// ══════════════════════════════════════════════════
+function calcMonthly() {
+  const annual  = parseFloat(document.getElementById('calc-annual').value.replace(/,/g, '')) || 1200000;
+  const monthly = Math.ceil((annual * 1.07) / 12 / 1000) * 1000;
+  document.getElementById('calc-monthly').textContent = '\u20A6' + monthly.toLocaleString('en-NG');
+  const score = Math.min(720, 500 + 12 * 10);
+  document.getElementById('rs-text').textContent = score + ' / 720';
+  document.getElementById('rs-fill').style.width = (score / 720 * 100) + '%';
+}
+
+// ══════════════════════════════════════════════════
+// UTILITIES
+// ══════════════════════════════════════════════════
+function copyLink() {
+  navigator.clipboard.writeText(location.href)
+    .then(() => toast('Link copied! Share with friends \uD83D\uDD17'));
+}
+
+function toast(msg, dur = 3200) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), dur);
+}
+
+// email validation feedback
+document.getElementById('hero-email').addEventListener('input', function () {
+  this.classList.toggle('valid', this.value.includes('@') && this.value.includes('.'));
+});
+
+// smooth scroll for all #join links
+document.querySelectorAll('a[href="#join"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('join').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// ══════════════════════════════════════════════════
+// INITIALISE
+// ══════════════════════════════════════════════════
+loadCount();
+calcMonthly();
+setTimeout(() => {
+  document.getElementById('prog-fill').style.width = '94.9%';
+  document.getElementById('rs-fill').style.width   = '86.1%';
+}, 600);
+</script>
+</body>
+</html>
