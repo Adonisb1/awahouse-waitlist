@@ -603,12 +603,11 @@ async function handleSubmit(e, source) {
     });
 
     if (res.ok) {
-      const data = await res.json();
-      const pos  = data[0]?.waitlist_position || (BASE_COUNT + 1);
-      const rc   = data[0]?.referral_code || '';
-      showSuccess(source, pos, rc);
-      animCounter(pos);
-    } else {
+  const pos = BASE_COUNT + 1;
+  showSuccess(source, pos, '');
+  animCounter(pos);
+}
+ else {
       const err = await res.json();
       if (err.code === '23505') {
         toast("You're already on the waitlist! \uD83C\uDF89");
