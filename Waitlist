@@ -545,8 +545,8 @@ footer{background:var(--ink);padding:56px 24px 36px;}
 // ══════════════════════════════════════════════════
 // CONFIGURATION — REPLACE BEFORE DEPLOYING
 // ══════════════════════════════════════════════════
-const SUPABASE_URL = https://umjrapvvblsvoeaqvwkz.supabase.co; 
-const SUPABASE_ANON_KEY = sb_publishable_NeM2Xdf0sbibhmrNEnJuFA_169VMshx;
+const SUPABASE_URL = 'https://umjrapvvblsvoeaqvwkz.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_NeM2Xdf0sbibhmrNEnJuFA_169VMshx';
 const BASE_COUNT = 2847; // fallback if Supabase not configured
 
 // ══════════════════════════════════════════════════
